@@ -3,9 +3,16 @@
 
 .btn {
   &-primary {
-
-  }
-  &-secondary {
-    
+    background: $purpleColor;
+    border: 2px solid $purpleColor;
+    padding: 12px 32px;
+    line-height: 1;
+    border-radius: 10px;
+    color: $whiteColor;
+    @include transition(.3);
+    &:hover {
+      background: transparent;
+      color: $purpleColor;
+    }
   }
 }

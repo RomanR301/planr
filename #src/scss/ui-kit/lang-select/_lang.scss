@@ -21,17 +21,26 @@
     pointer-events: none;
     z-index: 2;
     @include transition(.3);
+    margin-top: 8px;
+    padding: 0 20px;
   }
   &-option {
     position: relative;
     display: block;
     font-weight: 500;
-    color: #ffffff;
+    color: $defaultText;
     line-height: 30px;
     cursor: pointer;
     @include fontSize(16, 18);
     @include transition(.3);
     z-index: 99;
+    display: flex;
+    & span {
+      display: block;
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
     &:hover {
       color: #8E6954;
     }
@@ -54,17 +63,35 @@
     display: flex;
     align-items: center;
     font-weight: 500;
-    color: #ffffff;
+    color: $whiteColor;
     line-height: 24px;
     background: transparent;
     cursor: pointer;
-    @include fontSize(16, 18);
+    font-size: 18px;
+    @include transition(.3);
+    padding: 10px 20px;
+    border-radius: 10px;  
+    &:hover {
+      background: rgba(128, 51, 253, 0.2);
+    }
     & span {
-      color: #ffffff;
+      color: $defaultText;
+      line-height: 1;
+      display: block;
+      @include transition(.3);
+      &:first-child {
+        margin-right: 8px;
+      } 
     }
     & i {
-      margin-left: 6px;
-      transform: rotate(90deg);
+      background-image: url('../../img/arrow-black.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 14px;
+      height: 8px;
+      display: block;
+      margin-left: 5px;
+      margin-bottom: 2px;
       @include transition(.3);
       &:before {
         font-size: 10px;
@@ -73,6 +100,9 @@
     }
   }
   &.open {
+    & .lang-select__trigger {
+      background: rgba(128, 51, 253, 0.2);
+    }
     & .lang-options {
       opacity: 1;
       visibility: visible;
@@ -80,7 +110,7 @@
     }
     & .lang-select__trigger {
       & i {
-        transform: rotate(-90deg);
+        transform: rotate(180deg);
       }
     }
   }

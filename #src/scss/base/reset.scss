@@ -19,7 +19,7 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font-family: 'Intro', sans-serif;
-  color: $whiteColor;
+  color: $defaultText;
   font-weight: 400;
   vertical-align: baseline;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
@@ -27,13 +27,15 @@ time, mark, audio, video {
 
 body {
   position: relative;
-  background: $blackColor;
-  color: $whiteColor;
+  background: #EDF0F7;
+  color: $defaultText;
   font-family: 'Intro', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  
-  line-height: 1.7;
+  line-height: 1.5;
+  @media (max-width: $breakpoint-md) {
+    font-size: 16px;
+  }
 }
 
 

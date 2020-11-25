@@ -1,3 +1,101 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+.section-heading {
+  font-weight: 900;
+  font-size: 55px;
+  line-height: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.purple-bg {
+  background: $purpleColor;
+  font-weight: 900;
+  font-size: 55px;
+  color: $whiteColor;
+  padding: 12px 26px 4px 26px;
+  border-radius: 10px;
+  line-height: 1;
+  margin: auto;
+  position: relative;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    background: url(../../img/dot.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+  }
+  &.bottom-left {
+    &:before {
+      bottom: -26px;
+      left: -23px;
+    }
+  }
+  &.top-left {
+    &:before {
+      left: -23px;
+      top: -19px;
+    }
+  }
+  &.top-right {
+    &:after {
+      top: -19px;
+      right: -23px;
+    }
+  }
+  &.bottom-right {
+    &:after {
+      bottom: -26px;
+      right: -23px;
+    }
+  }
+}
+
+.text-row {
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  margin: auto;
+}
+
+.grey-text {
+  color: $greyColor;
+}
+
+.black-text {
+  color: $defaultText;
+}
+
+.section-heading {
+  margin-bottom: 15px;
+}
+.section-subheading {
+  font-size: 25px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.section-description {
+  text-align: center;
+}
+
+.main-screen {
+  margin-bottom: 100px;
+  & .purple-bg {
+    margin-bottom: 30px;
+  }
+  &__image {
+    padding: 60px 100px 0 100px;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+}
+
+.advantages {
+  margin-bottom: 120px;
+}
+
