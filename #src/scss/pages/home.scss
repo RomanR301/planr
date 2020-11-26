@@ -181,7 +181,7 @@ body {
     margin: 0 -15px 0 -15px;
   }
   & .swiper-button-prev, & .swiper-button-next {
-    @media (max-width: $breakpoint-md) {
+    @media (max-width: $breakpoint-xl) {
       display: none;
     }
   }
@@ -205,7 +205,7 @@ body {
       transform: unset;
     }
   }
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $breakpoint-xl) {
     display: flex;
   }
 }

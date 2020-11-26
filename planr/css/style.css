@@ -2034,6 +2034,17 @@ body {
     background-position: center top;
   }
 
+  .carousel-row .swiper-button-prev,
+  .carousel-row .swiper-button-next {
+    display: none;
+  }
+
+  .row.mobile-arrows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .swiper-container {
     width: 95%;
   }
@@ -2329,17 +2340,6 @@ body {
 
   .carousel-row {
     margin: 0 -15px 0 -15px;
-  }
-
-  .carousel-row .swiper-button-prev,
-  .carousel-row .swiper-button-next {
-    display: none;
-  }
-
-  .row.mobile-arrows {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 
   .swiper-container {
