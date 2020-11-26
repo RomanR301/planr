@@ -321,7 +321,7 @@ input[type=number] {
 }
 
 .lang-select__trigger i {
-  background-image: url("../../img/arrow-black.svg");
+  background-image: url("../img/arrow-black.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 14px;
@@ -1644,11 +1644,6 @@ button.swiper-pagination-bullet {
   margin-top: 30px;
 }
 
-.carousel-row .swiper-button-prev,
-.carousel-row .swiper-button-next {
-  display: none;
-}
-
 .row.mobile-arrows {
   display: none;
   margin-top: 20px;
@@ -2019,7 +2014,7 @@ button.swiper-pagination-bullet {
   }
 
   .header-lang {
-    margin: 20px 0 50px 0;
+    margin: 20px 0 70px 0;
   }
 
   .navbar {
@@ -2265,6 +2260,11 @@ button.swiper-pagination-bullet {
     margin: 0 -15px 0 -15px;
   }
 
+  .carousel-row .swiper-button-prev,
+  .carousel-row .swiper-button-next {
+    display: none;
+  }
+
   .row.mobile-arrows {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2301,12 +2301,17 @@ button.swiper-pagination-bullet {
     padding: 4px 16px;
   }
 
+  .contact {
+    background: unset;
+    padding-top: 0;
+  }
+
   .main-screen,
   .advantages,
   .testimonials,
   .features,
   .contact {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 

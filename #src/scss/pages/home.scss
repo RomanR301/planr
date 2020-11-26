@@ -174,7 +174,9 @@
     margin: 0 -15px 0 -15px;
   }
   & .swiper-button-prev, & .swiper-button-next {
-    display: none;
+    @media (max-width: $breakpoint-md) {
+      display: none;
+    }
   }
 }
 .row.mobile-arrows {
@@ -439,6 +441,10 @@
     background-position: center top 5%;
     padding-top: 100px;
   }
+  @media (max-width: $breakpoint-md) {
+    background: unset;
+    padding-top: 0;
+  }
   & .purple-bg-2 {
     margin-top: 10px;
   }
@@ -479,7 +485,7 @@
     margin-bottom: 60px;
   }
   @media (max-width: $breakpoint-md) {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
 

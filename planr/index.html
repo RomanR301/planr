@@ -17,9 +17,9 @@
   <header class="header">
     <div class="container">
       <div class="row">
-        <div class="header-logo">
+        <a href="#home" class="header-logo scroll-to">
           <img src="./img/main-logo.svg" alt="">
-        </div>
+        </a>
         <div class="navbar">
           <ul class="menu">
             <li class="menu-item">
@@ -71,7 +71,7 @@
   <section class="main-screen">
     <div class="container-fluid">
       <div class="row text-row">
-        <h1 class="section-heading">GUT GEPLANT</h1>
+        <h1 class="section-heading" id="home">GUT GEPLANT</h1>
         <div class="purple-bg bottom-left top-right">IST HALB GEWONNEN</div>
         <!-- note, you cant(!) use two dots on the same side 
             (for example top-left and bottom-left in one title) -->
@@ -205,6 +205,10 @@
   </section>
   <section class="testimonials">
     <div class="container">
+      <div class="row mobile-arrows">
+        <div class="swiper-button-prev testimonials-prev"></div>
+        <div class="swiper-button-next testimonials-next"></div>
+      </div>
       <div class="row carousel-row">
         <div class="swiper-button-prev testimonials-prev"></div>
         <div class="swiper-container testimonials-carousel">
