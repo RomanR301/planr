@@ -14,9 +14,10 @@
   &__copyright {
     color: $greyColor;
     font-size: 14px;
+    margin-top: 10px;
   }
   &__text {
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     display: flex;
     align-items: center;
     & span, & a {
@@ -49,6 +50,11 @@
         }
       }
     }
+    &.swiss {
+      & span {
+        font-size: 20px;
+      }
+    } 
   }
 }
 
@@ -60,4 +66,26 @@
   height: 15px;
   display: block;
   margin: 0 10px;
+}
+
+.icon-swiss {
+  background: url('../img/icon-swiss.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 26px;
+  height: 20px;
+  display: block;
+  margin: 0 10px;
+}
+
+@keyframes scale {
+  0% { 
+      transform: scale(1.0);
+  }
+  50% {
+      transform: scale(1.1)
+  }
+  100% { 
+      transform: scale(1.0);
+  }
 }

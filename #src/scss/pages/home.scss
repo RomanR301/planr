@@ -1,6 +1,12 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
+body {
+  -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
+  zoom: 0.9; /* Other non-webkit browsers */
+  zoom: 90%; /* Webkit browsers */
+}
+
 .section-heading {
   font-weight: 900;
   font-size: 55px;
@@ -170,6 +176,7 @@
 .carousel-row {
   position: relative;
   margin-top: 30px;
+  align-items: center;
   @media (max-width: $breakpoint-md) {
     margin: 0 -15px 0 -15px;
   }
@@ -181,8 +188,8 @@
 }
 .row.mobile-arrows {
   display: none;
-  margin-top: 20px;
-  justify-content: space-evenly;
+  // margin-top: 20px;
+  justify-content: center;
   & .swiper-button-prev, & .swiper-button-next {
     position: static;
     width: 50px;
@@ -252,11 +259,11 @@
 .testimonials {
   margin-bottom: 160px;
   &-carousel {
-    width: 100%;
+    // width: 100%;
     height: auto;
   }
   &__item {
-    width: 60%;
+    width: 80%;
     margin: auto;
     @media (max-width: $breakpoint-xl) {
       width: 80%;
@@ -433,6 +440,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: initial;
+  overflow: hidden;
   @media (max-width: $breakpoint-xl) {
     background-size: contain;
     background-position: center top 30%;
@@ -485,7 +493,7 @@
     margin-bottom: 60px;
   }
   @media (max-width: $breakpoint-md) {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 

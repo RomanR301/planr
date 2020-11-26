@@ -12,6 +12,9 @@ let front = {
             nextEl: '.advantages-next',
             prevEl: '.advantages-prev',
           },
+          pagination: {
+            el: '.advantages-pagination',
+          },
           breakpoints: {
             320: {
               slidesPerView: 1,
@@ -35,6 +38,9 @@ let front = {
         navigation: {
             nextEl: '.testimonials-next',
             prevEl: '.testimonials-prev',
+          },
+          pagination: {
+            el: '.testimonial-pagination',
           },
       });
       $(document).ready(function() {
