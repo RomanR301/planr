@@ -4,6 +4,38 @@ let front = {
   $body: $('body'),
   init: function () {
       this.events();
+      var advantages = new Swiper('.advantages-carousel', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.advantages-next',
+            prevEl: '.advantages-prev',
+          },
+      });
+      var testimonials = new Swiper('.testimonials-carousel', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.testimonials-next',
+            prevEl: '.testimonials-prev',
+          },
+      });
+      $(document).ready(function() {
+        $(".accordion__item .accordion__button").on("click", function(e) {
+        e.preventDefault();
+            if ($(this).parent().hasClass("active")) {
+            $(this).parent().removeClass("active");
+            $(this).parent().find(".accordion__content").slideUp(300);
+            } else {
+            $(".accordion__item").removeClass("active");
+            $(this).parent().addClass("active");
+            $(".accordion__content").slideUp(200);
+            $(this).parent().find(".accordion__content").slideDown(300);
+            }
+        });
+      });
   },
   toggleNav: function () {
     if (!this.hamburger.hasClass('open')) {

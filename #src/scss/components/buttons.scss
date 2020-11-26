@@ -9,7 +9,9 @@
     line-height: 1;
     border-radius: 10px;
     color: $whiteColor;
+    font-size: 18px;
     @include transition(.3);
+    cursor: pointer;
     &:hover {
       background: transparent;
       color: $purpleColor;

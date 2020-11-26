@@ -28,29 +28,34 @@
     width: 50px;
     height: 50px;
     z-index: 2;
+    opacity: 0;
   }
   &.bottom-left {
     &:before {
       bottom: -26px;
       left: -23px;
+      opacity: 1;
     }
   }
   &.top-left {
     &:before {
       left: -23px;
       top: -19px;
+      opacity: 1;
     }
   }
   &.top-right {
     &:after {
       top: -19px;
       right: -23px;
+      opacity: 1;
     }
   }
   &.bottom-right {
     &:after {
       bottom: -26px;
       right: -23px;
+      opacity: 1;
     }
   }
 }
@@ -97,5 +102,239 @@
 
 .advantages {
   margin-bottom: 120px;
+  padding-top: 125px;
+  background-image: url('../../img/circles.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: initial;
+  &__item {
+
+  }
+  &__icon {
+    margin-bottom: 35px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px
+  }
+  &__description {
+    color: $greyColor;
+  }
 }
 
+.carousel-row {
+  position: relative;
+  margin-top: 30px;
+}
+
+.swiper-container {
+  width: 80%;
+  height: 100%;
+  padding: 30px 20px;
+}
+
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.advantages__item {
+  box-shadow: 0px 10px 15px #DBDDE2;
+  border-radius: 30px;
+  padding: 35px 20px 30px 20px;
+  height: 100%;
+  min-height: 100%;
+  background: $whiteColor;
+}
+
+
+.testimonials {
+  margin-bottom: 160px;
+  &-carousel {
+    width: 100%;
+    height: auto;
+  }
+  &__item {
+    width: 60%;
+    margin: auto;
+  }
+  &__text {
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
+  }
+  &__image {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    margin-bottom: 10px;
+    & img {
+      @include defaultIcon(cover);
+    }
+  }
+  &__name {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  &__position {
+    color: $greyColor;
+  }
+}
+
+.features {
+  margin-bottom: 120px;
+  &__image {
+    width: 60%;
+    & img {
+      @include defaultIcon(contain);
+    }
+  }
+  &__content {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+  }
+  &__accordion {
+    width: 40%;
+  }
+}
+
+.accordion {
+  &-container {
+
+  }
+  &__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    &.active {
+      & .accordion__button {
+        background: transparent;
+        color: $purpleColor;
+      }
+      & i {
+        background: transparent;
+        border-color: $purpleColor;
+      }
+      & i:before {
+        transform: rotate(135deg);
+        background: $purpleColor;
+      }
+      & i:after {
+        transform: rotate(225deg);
+        background: $purpleColor;
+      }
+    }
+  }
+  &__content {
+    margin-top: 20px;
+    display:none;
+    padding: 0 40px 0 0;
+    & p {
+      color: $greyColor;
+    }
+  }
+  &__button {
+    display: inline-flex;
+    padding: 6px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $defaultText;
+    font-weight: 900;
+    font-size: 35px;
+    @include transition(.3);
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $purpleColor;
+    color: $whiteColor;
+    background: $purpleColor;
+    & i {
+      min-width: 30px;
+      min-height: 30px;
+      max-width: 30px;
+      max-height: 30px;
+      border-radius: 100px;
+      position: relative;
+      display: block;
+      margin-left: 10px;
+      border: 2px solid $whiteColor;
+      &:before, &:after {
+        content: '';
+        width: 18px;
+        height: 2px;
+        position: absolute;
+        left: calc(50% - 9px);
+        top: calc(50% - 1px);
+        background: $whiteColor;
+        transform: rotate(90deg);
+        @include transition(.3);
+      }
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.contact {
+  padding-top: 210px;
+  margin-bottom: 60px;
+  background-image: url('../../img/contact-bg.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: initial;
+  & .purple-bg-2 {
+    margin-top: 10px;
+  }
+  &-form {
+    margin-top: 40px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form-row {
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 20px;
+  & input, & textarea {
+    width: 100%;
+    border: 2px solid #8033FD;
+    border-radius: 10px;
+    background: transparent;
+    padding: 16px 24px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    background: $backgroundColor;
+    &:focus {
+      box-shadow: 5px 6px 7px rgba(128,51,253,.2)
+    }
+  }
+}
