@@ -12,6 +12,21 @@ let front = {
             nextEl: '.advantages-next',
             prevEl: '.advantages-prev',
           },
+          breakpoints: {
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 40,
+              autoHeight: true,
+            },
+            767: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+              autoHeight: false,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+        }
       });
       var testimonials = new Swiper('.testimonials-carousel', {
         slidesPerView: 1,
@@ -36,6 +51,7 @@ let front = {
             }
         });
       });
+      
   },
   toggleNav: function () {
     if (!this.hamburger.hasClass('open')) {
@@ -49,103 +65,43 @@ let front = {
         }
     },
 
-
-
   events: function () {
       let self = this;
       $(document).on('click', '.hamburger', function () {
           self.toggleNav();
       });
+      if($(window).width() < 767) {
+        $(document).on('click', '.scroll-to', function(){
+          $('html, body').animate({
+              scrollTop: $( $(this).attr('href') ).offset().top - 80
+          }, 500);
+          $('body').removeClass('active');
+          $('.navbar').removeClass('active');
+          $('.hamburger').removeClass('open');
+          
+          return false;
+  
+        });
+      } else {
+        $(document).on('click', '.scroll-to', function(){
+          $('html, body').animate({
+              scrollTop: $( $(this).attr('href') ).offset().top - 130
+          }, 500);
+          $('body').removeClass('active');
+          $('.navbar').removeClass('active');
+          $('.hamburger').removeClass('open');
+          
+          return false;
+  
+        });
+      }
+    
   }
 };
-
-let modal = {
-  closeButton: $('.modal__close'),
-  closeOverlay: $('.modal'),
-  can: 1,
-  init: function () {
-      this.events();
-  },
-  openModal: function (id) {
-      let modalWindow = $(id);
-      modalWindow.fadeIn();
-      modalWindow.find('.modal__content').removeClass('animate-away').addClass('animate-in');
-
-      $('body, html').addClass('active');
-  },
-
-  closeModal: function (id) {
-      let modalWindow = $(id);
-      modalWindow.find('.modal__content').removeClass('animate-in').addClass('animate-away');
-      modalWindow.fadeOut();
-      $('body, html').removeClass('active');
-  },
-
-  events: function () {
-
-      $(document).on('click', '.modalTrigger', function (e) {
-          e.preventDefault();
-          let self = $(this),
-              target = self.attr('data-modal');
-          modal.openModal(target);
-
-      });
-
-      $(document).on('click', '.modal', function (event) {
-          let self = '#' + $(this).attr('id');
-          if (event.target.className == 'modal__body') {
-              modal.closeModal(self);
-          }
-      });
-
-      $(document).on('click', '.modal__close', function () {
-          let self = '#' + $(this).closest('.modal').attr('id');
-          modal.closeModal(self);
-      });
-        $(document).on('click', '.scroll-to-top i', function () {
-            $('body,html').animate({
-                scrollTop : 0                       // Scroll to top of body
-            }, 500);
-      });
-        $(document).on('click', '.scroll-down i', function () {
-            $('html, body').animate({
-                scrollTop: $(this).closest("section").next().offset().top - 90
-             }, "slow");
-      });
-
-  }
-};
-
 
 jQuery(function () {
-  front.init();
-  modal.init();
-    
+  front.init();    
 });
-
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 10) {
-//     $('.scroll-to-top').addClass("scrolled");
-//   } else {
-//   	$('.scroll-to-top').removeClass("scrolled");
-//   }
-// });
-
-document.body.addEventListener('keyup', function(e) {
-  if (e.which === 9) /* tab */ {
-    document.body.classList.remove('no-focus-outline');
-  }
-});
-
-
-// HIDE MENU ON BODY CLICK
-
-// $('html').click(function(e) {
-//     var a = e.target;
-//     if ($(a).parents('.menu-item-has-child').length === 0) {
-//       $('.menu-item-has-child').removeClass('show'); //hide menu item
-//    }
-//   });
 
 
 let langToggle = document.querySelector('.lang-select-wrapper') !== null;

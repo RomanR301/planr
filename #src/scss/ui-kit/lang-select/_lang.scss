@@ -48,9 +48,9 @@
 }
 .header-lang {
   margin: 0 10px;
-  @media (max-width: $breakpoint-xl) {
-    display: none;
-  }
+  // @media (max-width: $breakpoint-xl) {
+  //   display: none;
+  // }
 }
 .lang-select {
   &-wrapper {
