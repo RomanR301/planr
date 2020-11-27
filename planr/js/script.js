@@ -34,7 +34,7 @@ let front = {
       var testimonials = new Swiper('.testimonials-carousel', {
         slidesPerView: 1,
         spaceBetween: 30,
-        loop: true,
+        watchOverflow: true,
         navigation: {
             nextEl: '.testimonials-next',
             prevEl: '.testimonials-prev',

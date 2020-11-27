@@ -2003,8 +2003,8 @@ body {
   overflow: hidden;
 }
 
-.contact .purple-bg-2 {
-  margin-top: 10px;
+.contact .purple-bg {
+  margin-bottom: 15px;
 }
 
 .contact-form {
