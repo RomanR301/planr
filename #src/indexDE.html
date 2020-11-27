@@ -259,25 +259,33 @@
             confident with our planner
           </div>
         </div>
-        <div class="row features__content">
-          <div class="features__image">
-            <img src="./img/features-image.png" alt="">
+        <div class="row features__content tabs">
+          <div class="tabs-wrap features__image">
+            <div class="tab-content active" id="tab-0">
+              <img src="./img/planr_view_1.png" alt="">
+            </div>
+            <div class="tab-content" id="tab-1">
+              <img src="./img/planr_view_2.png" alt="">
+            </div>
+            <div class="tab-content" id="tab-2">
+              <img src="./img/planr_view_3.png" alt="">
+            </div>
           </div>
           <div class="features__accordion">
-            <div class="accordion-container">
-              <div class="accordion__item">
-                <a class="accordion__button" href="#">
+            <div class="accordion-container tabs-list tabs-ul">
+              <div class="accordion__item tabs-list__item active">
+                <a onclick="front.openTab(this, 'tab-0','.tabs')" class="tabs-list__item_link tab-links accordion__button" href="#">
                   Einsatzplanung
                   <i class="accordion__arrow"></i>
                 </a>
-                <div class="accordion__content">
+                <div class="accordion__content" style="display:block">
                   <p>Die erste Hauptansicht ist nach Mitarbeitern geordnet und zeigt an, wer wann wo eingesetzt wird.
                     Erklärung tbd
                   </p>
                 </div>
               </div>
-              <div class="accordion__item">
-                <a class="accordion__button" href="#">
+              <div class="accordion__item tabs-list__item">
+                <a onclick="front.openTab(this, 'tab-1','.tabs')" class="tabs-list__item_link tab-links accordion__button" href="#">
                   Ressourcenmanagement
                   <i class="accordion__arrow"></i>
                 </a>
@@ -287,8 +295,8 @@
                   </p>
                 </div>
               </div>
-              <div class="accordion__item">
-                <a class="accordion__button" href="#">
+              <div class="accordion__item tabs-list__item">
+                <a onclick="front.openTab(this, 'tab-2','.tabs')" class="tabs-list__item_link tab-links accordion__button" href="#">
                   Abwesenheitsplanung
                   <i class="accordion__arrow"></i>
                 </a>
@@ -328,5 +336,5 @@
       </div>
     </section>
   </main>
-
+  
 @@include('_footer.html')
