@@ -315,7 +315,10 @@ body {
       width: 55%;
     }
     @media (max-width: $breakpoint-lg) {
-      width: 50%;
+      width: 70%;
+    }
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
     }
     & img {
       @include defaultIcon(contain);
@@ -337,6 +340,9 @@ body {
   }
   &__accordion {
     width: 45%;
+    @media (max-width: $breakpoint-xl) {
+      width: 40%;
+    }
     @media (max-width: $breakpoint-lg) {
       width: 100%;
       margin-top: 30px;

@@ -203,6 +203,42 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.tabs-wrap .tab-content {
+  -webkit-box-shadow: 3px 2px 25px rgba(0, 0, 0, 0.3);
+          box-shadow: 3px 2px 25px rgba(0, 0, 0, 0.3);
+  display: none;
+  animation: fadeEffect .5s;
+  -webkit-animation: fadeEffect .5s;
+}
+
+.tabs-wrap .tab-content.is-show {
+  display: block;
+}
+
+.tabs-wrap .tab-content.active {
+  display: block;
+}
+
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .lang {
   color: #3D3131;
   line-height: 17px;
@@ -2057,6 +2093,10 @@ body {
     width: 55%;
   }
 
+  .features__accordion {
+    width: 40%;
+  }
+
   .accordion__button {
     font-size: 26px;
     padding: 6px 16px;
@@ -2150,7 +2190,7 @@ body {
   }
 
   .features__image {
-    width: 50%;
+    width: 70%;
   }
 
   .features__content {
@@ -2389,5 +2429,9 @@ body {
 @media (max-width: 575px) {
   .m-row {
     margin: 0 !important;
+  }
+
+  .features__image {
+    width: 100%;
   }
 }
