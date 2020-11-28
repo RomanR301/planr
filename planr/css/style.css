@@ -504,10 +504,6 @@ body.active:before {
   opacity: 1;
 }
 
-.body-padding {
-  padding-top: 150px;
-}
-
 .header {
   background: #EDF0F7;
   padding: 9px 140px;
@@ -1600,7 +1596,7 @@ body {
 
 .section-heading {
   font-weight: 900;
-  font-size: 55px;
+  font-size: 46px;
   line-height: 1;
   text-align: center;
   width: 100%;
@@ -1609,7 +1605,7 @@ body {
 .purple-bg {
   background: #8033FD;
   font-weight: 900;
-  font-size: 55px;
+  font-size: 46px;
   color: #ffffff;
   padding: 12px 26px 4px 26px;
   border-radius: 10px;
@@ -1664,7 +1660,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 55%;
+  width: 70%;
   margin: auto;
 }
 
@@ -1691,6 +1687,7 @@ body {
 }
 
 .main-screen {
+  padding-top: 150px;
   margin-bottom: 100px;
   overflow: hidden;
 }
@@ -1841,6 +1838,7 @@ body {
   margin: auto;
   border-radius: 100%;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 
 .testimonials__image img {
@@ -2316,10 +2314,6 @@ body {
     padding: 0;
   }
 
-  .body-padding {
-    padding-top: 100px;
-  }
-
   .header-contact .btn {
     font-size: 14px;
     padding: 10px 18px;
@@ -2348,6 +2342,10 @@ body {
   .section-subheading {
     font-size: 20px;
     margin-bottom: 20px;
+  }
+
+  .main-screen {
+    padding-top: 100px;
   }
 
   .main-screen__image {

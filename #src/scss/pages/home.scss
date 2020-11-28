@@ -9,7 +9,7 @@ body {
 
 .section-heading {
   font-weight: 900;
-  font-size: 55px;
+  font-size: 46px;
   line-height: 1;
   text-align: center;
   width: 100%;
@@ -21,7 +21,7 @@ body {
 .purple-bg {
   background: $purpleColor;
   font-weight: 900;
-  font-size: 55px;
+  font-size: 46px;
   color: $whiteColor;
   padding: 12px 26px 4px 26px;
   border-radius: 10px;
@@ -76,7 +76,7 @@ body {
 .text-row {
   flex-direction: column;
   align-items: center;
-  width: 55%;
+  width: 70%;
   margin: auto;
   @media (max-width: $breakpoint-xl) {
     width: 90%;
@@ -111,6 +111,10 @@ body {
 }
 
 .main-screen {
+  padding-top: 150px;
+  @media (max-width: $breakpoint-md) {
+    padding-top: 100px;
+  }
   margin-bottom: 100px;
   overflow: hidden;
   & .purple-bg {
@@ -294,6 +298,7 @@ body {
     margin: auto;
     border-radius: 100%;
     margin-bottom: 10px;
+    overflow: hidden;
     & img {
       @include defaultIcon(cover);
     }
