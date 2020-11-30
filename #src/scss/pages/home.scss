@@ -2,9 +2,9 @@
 @import "../abstracts/variables";
 
 body {
-  -moz-transform: scale(0.9, 0.9); /* Moz-browsers */
-  zoom: 0.9; /* Other non-webkit browsers */
-  zoom: 90%; /* Webkit browsers */
+  -moz-transform: scale(1,1);
+    zoom: .9;
+    zoom: 90%;
 }
 
 .section-heading {
